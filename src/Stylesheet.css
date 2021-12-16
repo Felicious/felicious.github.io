@@ -8,6 +8,8 @@
 
 .lemon {
   color: yellow;
+  padding: 10px; /* px is the more accessible! */
+  padding-bottom: 0; /* padding all around except bottom*/
 }
 
 /* use margin-inline-start for spacing to accomodate other lang
