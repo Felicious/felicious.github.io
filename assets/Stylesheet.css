@@ -1,3 +1,22 @@
+/* global styles to fix width of the box (content + padding, margin) to the width specified instead of the default, 
+     which is fixing the element to the width specified, with the padding and stuff adding extra pixel paddings*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 .lemon {
   color: yellow;
 }
+
+/* use margin-inline-start for spacing to accomodate other lang
+
+built-in for chrome
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}*/
