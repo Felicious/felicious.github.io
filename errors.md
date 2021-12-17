@@ -29,3 +29,7 @@ git add index.html
 ```
 
 Which added the new accepted merge to index.html. Now, I could `commit` and `push` as normal.
+
+### update node
+
+https://github.com/nvm-sh/nvm#installing-and-updating
