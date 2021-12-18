@@ -6,10 +6,21 @@
   box-sizing: border-box;
 }
 
-.lemon {
-  color: yellow;
-  padding: 10px; /* px is the more accessible! */
-  padding-bottom: 0; /* padding all around except bottom*/
+.toggle {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.image-container {
+  /* TODO: fit image to window*/
+}
+
+.night-theme {
+  color: red;
+}
+
+.day-theme {
+  color: blue;
 }
 
 /* use margin-inline-start for spacing to accomodate other lang

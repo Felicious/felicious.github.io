@@ -1,7 +1,6 @@
-import sunflower from "./images/DSC_7586.jpg";
-import lantern from "./images/DSC_3044.jpg";
 import LightToggle from "./LightToggle.js";
 import { useState } from "react";
+import "./Stylesheet.css";
 
 function App() {
   // declare state variable
@@ -20,9 +19,12 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div className={theme ? "night-theme" : "day-theme"}>
       <LightToggle isOn={theme} handleToggle={() => setTheme(!theme)} />
-      {picture}
+      <div className="image-container">
+        {picture}
+        <p>Hello, I'm Felicia</p>
+      </div>
     </div>
   );
 }
