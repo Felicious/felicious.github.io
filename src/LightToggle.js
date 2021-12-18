@@ -1,30 +1,39 @@
-
-import {useState} from 'react';
+import React from "react";
 
 // prop to pass in current checkbox value
-function LightToggle (props) {
+const LightToggle = props => {
   let display;
-/*
+
+  // destructure 1st, 2nd param of props + save them as 2 variables
+  // for readability
+  const { isOn, handleToggle } = props;
+  /*
   render() {
     if(theme){
-      display = <img src="https://feliciakuan.com/assets/images/DSC_7586.jpg" alt="Day" />;
+      display = <img src="https://feliciakuan.com/src/images/DSC_7586.jpg" alt="Day" />;
     } else {
-      display = <img src="https://feliciakuan.com/assets/images/DSC_3044.jpg" alt="Night" />;
+      display = <img src="https://feliciakuan.com/src/images/DSC_3044.jpg" alt="Night" />;
     }*/
 
-    /* webpage */
-    return (
-      <span>
-        <input type="checkbox" class="toggle" role="button"
-          onClick={()=> setTheme(!theme)}/>;
-      </span>
+  if (isOn) {
+    display = "Night mode";
+  } else {
+    display = "Day mode";
+  }
 
-      <div>
-        {display}
-      </div>
+  /* webpage */
+  return (
+    <span>
+      <input
+        type="checkbox"
+        className="toggle-button"
+        role="button"
+        checked={isOn}
+        onChange={handleToggle}
+      />
+      <label> {display} </label>
+    </span>
+  );
+};
 
-      
-    );
-} 
-
-export default LightToggle; 
+export default LightToggle;
