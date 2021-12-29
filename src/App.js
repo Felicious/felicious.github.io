@@ -1,4 +1,4 @@
-import LightToggle from "./LightToggle.js";
+import LightToggle from "./components/LightToggle.js";
 import { useState } from "react";
 import "./Stylesheet.css";
 
@@ -21,10 +21,10 @@ function App() {
   return (
     <div className={theme ? "night-theme" : "day-theme"}>
       <LightToggle isOn={theme} handleToggle={() => setTheme(!theme)} />
-      <div className="image-container">
-        {picture}
-        <p>Hello, I'm Felicia</p>
-      </div>
+      <div className="container">{picture}</div>
+      <p className="bio">
+        I'm a developer with a childhood dream of becoming a writer
+      </p>
     </div>
   );
 }

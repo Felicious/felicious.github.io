@@ -11,8 +11,34 @@
   justify-content: flex-end;
 }
 
-.image-container {
-  /* TODO: fit image to window*/
+/* currently implementing what i know from previous project; 
+  TODO: change design */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  width: 50vh;
+  border-style: solid;
+}
+
+.img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+/*
+@media (max-width: 400px) {
+
+  .container > * {
+    color: green;
+    max-height: 100%;
+    max-width: 100%;
+  }
+}
+*/
+.bio {
+  flex: 50%;
 }
 
 .night-theme {
