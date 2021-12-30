@@ -19,12 +19,15 @@ function App() {
   }
 
   return (
-    <div className={theme ? "night-theme" : "day-theme"}>
-      <LightToggle isOn={theme} handleToggle={() => setTheme(!theme)} />
-      <div className="container">{picture}</div>
-      <p className="bio">
-        I'm a developer with a childhood dream of becoming a writer
-      </p>
+    <div className="homepage">
+      <div className={theme ? "night-theme" : "day-theme"}>
+        <LightToggle isOn={theme} handleToggle={() => setTheme(!theme)} />
+
+        <div className="container">{picture}</div>
+        <p className="bio">
+          I'm a developer with a childhood dream of becoming a writer
+        </p>
+      </div>
     </div>
   );
 }

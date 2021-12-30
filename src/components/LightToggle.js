@@ -17,7 +17,7 @@ const LightToggle = props => {
 
   /* webpage */
   return (
-    <span>
+    <span className="toggle">
       <input
         type="checkbox"
         className="toggle-button"
