@@ -6,13 +6,54 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  height: 100%;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+.homepage {
+  height: 100vh;
+  width: 100vw;
+}
 .toggle {
   display: flex;
   justify-content: flex-end;
 }
 
-.image-container {
-  /* TODO: fit image to window*/
+/* currently implementing what i know from previous project; 
+  TODO: change design */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-style: solid;
+}
+.container > * {
+  flex: 1;
+  object-fit: contain;
+}
+/* mobile first, so the media query is for desktop */
+@media (min-width: 450px) {
+  .container > * {
+    /*height: 70%;*/
+
+    width: 35%;
+    min-width: 400px;
+    max-width: 800px;
+    /*
+    the clamp defines lower and upper bound of width
+    
+    width: clamp(400px, 35%, 100vw);*/
+    object-fit: contain;
+  }
+}
+
+.bio {
+  flex: 50%;
 }
 
 .night-theme {

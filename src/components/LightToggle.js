@@ -1,5 +1,5 @@
 import React from "react";
-import "./Stylesheet.css";
+import "../Stylesheet.css";
 
 // prop to pass in current checkbox value
 const LightToggle = props => {

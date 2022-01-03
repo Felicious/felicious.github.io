@@ -18,6 +18,13 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
+**While developing in another branch**, simply run `npm start` in your non-main branch to see your local changes on the development server.
+
+```
+git checkout <existing branch>
+npm start
+```
+
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\

@@ -1,4 +1,7 @@
-import LightToggle from "./LightToggle.js";
+import * as React from "react";
+import { ChakraProvider } from "@chakra-ui/react";
+import LightToggle from "./components/LightToggle.js";
+//import ChakraNavBar from "./components/ChakraNavBar.js";
 import { useState } from "react";
 import "./Stylesheet.css";
 
@@ -19,13 +22,18 @@ function App() {
   }
 
   return (
-    <div className={theme ? "night-theme" : "day-theme"}>
-      <LightToggle isOn={theme} handleToggle={() => setTheme(!theme)} />
-      <div className="image-container">
-        {picture}
-        <p>Hello, I'm Felicia</p>
+    <ChakraProvider>
+      <div className="homepage">
+        <div className={theme ? "night-theme" : "day-theme"}>
+          <LightToggle isOn={theme} handleToggle={() => setTheme(!theme)} />
+
+          <div className="container">{picture}</div>
+          <p className="bio">
+            I'm a developer with a childhood dream of becoming a writer
+          </p>
+        </div>
       </div>
-    </div>
+    </ChakraProvider>
   );
 }
 
